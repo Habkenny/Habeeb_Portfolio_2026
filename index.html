@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Habeeb Kehinde | Frontend Developer Portfolio</title>
+
+    <meta
+      name="description"
+      content="Frontend Developer portfolio showcasing responsive, accessible, and SEO-friendly web projects built with HTML, CSS, and JavaScript."
+    />
+
+    <meta name="author" content="Habeeb Kehinde" />
+
+    <!-- Open Graph (social sharing) -->
+    <meta property="og:title" content="Habeeb Kehinde | Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio showcasing modern, accessible, and responsive frontend projects."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container nav">
+        <h1 class="logo">Habeeb Kehinde</h1>
+        <nav>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="btn"> Contact </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <img
+          src="HABEEB.JPG"
+          alt="Portrait of Habeeb Kehinde, Frontend Developer"
+          class="profile-img"
+        />
+
+        <h2>Frontend Developer</h2>
+        <p>
+          I build responsive, accessible, and modern websites using HTML, CSS,
+          and JavaScript.
+        </p>
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <main>
+      <section class="projects" id="projects">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <h3>Rokkers Foundation</h3>
+              <p>
+                Mobile-first NGO landing page optimized for SEO and
+                accessibility.
+              </p>
+              <a
+                href="https://habkenny.github.io/Rokkers_Foundation_Charity/"
+                target="_blank"
+                rel="noopener"
+                aria-label="View live demo of Rokkers Foundation project"
+                >Live Demo</a
+              >
+              <a
+                href="https://habkenny.github.io/Rokkers_Foundation_Charity/"
+                target="_blank"
+                >GitHub</a
+              >
+              <a href="https://rokkersfoundation.netlify.app/" target="_blank"
+                >Netlify</a
+              >
+            </article>
+
+            <article class="project-card">
+              <h3>Landing Page Template</h3>
+              <p>Reusable landing page layout built with Flexbox and Grid.</p>
+              <a href="#">Live Demo</a>
+              <a href="#">GitHub</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <p>
+            I am a frontend developer passionate about creating clean,
+            user-friendly interfaces. I focus on writing semantic HTML, scalable
+            CSS, and accessible web experiences.
+          </p>
+
+          <ul class="skills">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Responsive Design</li>
+            <li>Accessibility</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <p>Interested in working together? Send me a message.</p>
+
+          <!-- Contact Form -->
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            class="contact-form"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2025 Habeeb Kehinde. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
