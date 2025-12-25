@@ -1,272 +1,199 @@
-/* =====================
-   RESET & BASE
-===================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background: #f9fafb;
-}
-
-/* =====================
-   UTILITIES
-===================== */
-.container {
-  width: 92%;
-  margin: auto;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 32px;
-  font-size: 1.8rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-primary {
-  background: #2563eb;
-  color: #fff;
-}
-
-.btn-secondary {
-  background: #111827;
-  color: #fff;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* =====================
-   HEADER
-===================== */
-.header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 0;
-}
-
-.logo {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #111827;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* =====================
-   HERO
-===================== */
-.hero {
-  padding: 80px 0;
+/* HERO */
+.hero-section {
+  min-height: 100vh;
   background: linear-gradient(to right, #2563eb, #1e40af);
-  color: #fff;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: 0 auto 24px;
-}
-
-/* =====================
-   PROJECTS
-===================== */
-.projects {
-  padding: 60px 0;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-.project-card {
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-}
-
-.project-card h3 {
-  margin-bottom: 10px;
-}
-
-.project-card p {
-  margin-bottom: 14px;
-}
-
-.project-card a {
-  margin-right: 12px;
-  color: #2563eb;
-  font-weight: 600;
-}
-
-/* =====================
-   ABOUT
-===================== */
-.about {
-  padding: 60px 0;
-  background: #ffffff;
-}
-
-.about p {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  text-align: center;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  list-style: none;
-}
-
-.skills li {
-  background: #e5e7eb;
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-/* =====================
-   CONTACT
-===================== */
-.contact {
-  padding: 70px 0;
-  background: #111827;
-  color: #ffffff;
-  text-align: center;
-}
-
-.contact p {
-  margin-bottom: 20px;
-}
-
-/* =====================
-   FOOTER
-===================== */
-.footer {
-  padding: 18px 0;
-  background: #020617;
-  color: #9ca3af;
-  text-align: center;
-  font-size: 0.85rem;
-}
-
-/* =====================
-   DESKTOP (768px+)
-===================== */
-@media (min-width: 768px) {
-  .hero h2 {
-    font-size: 2.8rem;
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* =====================
-   CONTACT FORM
-===================== */
-.contact-form {
-  max-width: 500px;
-  margin: 30px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.contact-form label {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
-  text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-  font-size: 1rem;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: 3px solid #2563eb;
-  outline-offset: 2px;
-}
-
-/* =====================
-   PROFILE IMAGE
-===================== */
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  border: 4px solid rgba(255, 255, 255, 0.6);
-}
-
-.hero-content {
-  max-width: 700px;
-  margin: auto;
+  padding-top: 120px;
 }
 
 .profile-img {
   width: 180px;
   height: 180px;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+}
+
+/* ABOUT */
+.about-text {
+  max-width: 720px;
+}
+
+/* SKILLS */
+.skills-section {
+  background: #f8fafc;
+}
+
+.skill-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+/* CONTACT */
+.contact-form {
+  max-width: 480px;
+}
+
+/* ========================= */
+/* General Transitions & Hover Effects */
+/* ========================= */
+a,
+button,
+.card,
+.skill-card {
+  transition: all 0.3s ease;
+}
+
+/* ========================= */
+/* Hero Buttons Hover */
+.hero-section .btn {
+  transform: translateY(0);
+}
+
+.hero-section .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================= */
+/* Project Card Hover */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================= */
+/* Skill Card Hover */
+.skill-card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================= */
+/* Hero Section Text Fade In on Load */
+.hero-section h1,
+.hero-section p,
+.hero-section .btn {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.hero-section p {
+  animation-delay: 0.3s;
+}
+
+.hero-section .btn {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* Profile Image Hover */
+.profile-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================= */
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================= */
+/* Hero Social Links Animation */
+.social-links a {
+  display: inline-block;
+  color: white;
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.social-links a:nth-child(1) {
+  animation-delay: 1s;
+}
+.social-links a:nth-child(2) {
+  animation-delay: 1.2s;
+}
+.social-links a:nth-child(3) {
+  animation-delay: 1.4s;
+}
+.social-links a:nth-child(4) {
+  animation-delay: 1.6s;
+}
+
+/* ========================= */
+/* Sticky Social Bar */
+.social-bar {
+  position: fixed;
+  top: 50%;
+  left: -60px; /* start off-screen */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1000;
+  animation: slideIn 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.social-bar a {
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.social-bar a:hover {
+  color: #0d6efd;
+  transform: translateX(5px) scale(1.1);
+}
+
+@keyframes slideIn {
+  to {
+    left: 0;
+  }
 }
