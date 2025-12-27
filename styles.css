@@ -1,199 +1,269 @@
-html {
+/* ===== General Styles ===== */
+body {
+  font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
+  background-color: #f8f9fa;
+  margin: 0;
+  /* padding-top: 80px; space for fixed navbar */
+  color: #212529;
 }
 
-/* HERO */
+h1,
+h2,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+p,
+li {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+.navbar .btn-outline-primary {
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar .btn-outline-primary:hover,
+.navbar .btn-outline-primary:focus {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+  text-decoration: none;
+}
+
+/* ===== Hero Section ===== */
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(to right, #2563eb, #1e40af);
-  padding-top: 120px;
+  background: linear-gradient(180deg, #0d6efd 0%, #6610f2 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 1rem;
 }
 
 .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.6);
-}
-
-/* ABOUT */
-.about-text {
-  max-width: 720px;
-}
-
-/* SKILLS */
-.skills-section {
-  background: #f8fafc;
-}
-
-.skill-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 28px 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  height: 100%;
-}
-
-.skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
-}
-
-.skill-icon {
-  font-size: 2rem;
-  display: inline-block;
-}
-
-/* CONTACT */
-.contact-form {
-  max-width: 480px;
-}
-
-/* ========================= */
-/* General Transitions & Hover Effects */
-/* ========================= */
-a,
-button,
-.card,
-.skill-card {
-  transition: all 0.3s ease;
-}
-
-/* ========================= */
-/* Hero Buttons Hover */
-.hero-section .btn {
-  transform: translateY(0);
-}
-
-.hero-section .btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* ========================= */
-/* Project Card Hover */
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* ========================= */
-/* Skill Card Hover */
-.skill-card {
-  background-color: #f8f9fa;
-  border-radius: 12px;
-  padding: 20px;
-}
-
-.skill-card:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
-}
-
-/* ========================= */
-/* Hero Section Text Fade In on Load */
-.hero-section h1,
-.hero-section p,
-.hero-section .btn {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-}
-
-.hero-section p {
-  animation-delay: 0.3s;
-}
-
-.hero-section .btn {
-  animation-delay: 0.6s;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ========================= */
-/* Profile Image Hover */
-.profile-img {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 4px solid #fff;
+  transition: transform 0.3s ease;
 }
 
 .profile-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ========================= */
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* ========================= */
-/* Hero Social Links Animation */
-.social-links a {
-  display: inline-block;
-  color: white;
-  font-size: 1.5rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-}
-
-.social-links a:nth-child(1) {
-  animation-delay: 1s;
-}
-.social-links a:nth-child(2) {
-  animation-delay: 1.2s;
-}
-.social-links a:nth-child(3) {
-  animation-delay: 1.4s;
-}
-.social-links a:nth-child(4) {
-  animation-delay: 1.6s;
-}
-
-/* ========================= */
-/* Sticky Social Bar */
-.social-bar {
-  position: fixed;
-  top: 50%;
-  left: -60px; /* start off-screen */
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 5px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  z-index: 1000;
-  animation: slideIn 1s forwards;
-  animation-delay: 0.5s;
-}
-
-.social-bar a {
-  color: white;
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
+/* Hero Buttons */
+.hero-section .btn {
+  min-width: 150px;
   transition: all 0.3s ease;
 }
 
-.social-bar a:hover {
-  color: #0d6efd;
-  transform: translateX(5px) scale(1.1);
+.hero-section .btn:hover,
+.hero-section .btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes slideIn {
-  to {
-    left: 0;
+/* Social Links */
+.social-links a {
+  color: #fff;
+  font-size: 1.4rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  transform: scale(1.2);
+  color: #ffc107;
+}
+
+/* ===== Projects Section ===== */
+#projects .card {
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .card:hover,
+#projects .card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#projects .card-title {
+  font-weight: 600;
+}
+
+#projects .card-text {
+  color: #6c757d;
+}
+
+/* ===== About Section ===== */
+#about p {
+  max-width: 800px;
+  margin: auto;
+  color: #495057;
+  font-size: 1rem;
+}
+
+/* ===== Skills Section ===== */
+.skill-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover,
+.skill-card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  font-size: 2rem;
+}
+
+/* ===== Contact Section ===== */
+.contact-form {
+  max-width: 600px;
+  background: #212529;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+  color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #343a40;
+  border: 1px solid #495057;
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #000;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* ===== Buttons & Links ===== */
+a,
+button {
+  outline: none;
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  #projects .card {
+    text-align: center;
+  }
+
+  .skill-card {
+    padding: 1.2rem 0.8rem;
+  }
+}
+
+/* ===== Navbar Items ===== */
+.navbar-nav .nav-item {
+  margin: 0 0.5rem; /* Space between items */
+  position: relative; /* For underline effect */
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #212529;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover & Focus Effects */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+/* Underline animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0d6efd;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+  width: 100%;
+}
+
+/* Active Link Highlight */
+.navbar-nav .nav-link.active {
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 992px) {
+  .navbar-nav .nav-item {
+    margin: 0.25rem 0;
   }
 }
