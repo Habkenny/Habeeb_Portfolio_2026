@@ -28,50 +28,28 @@
   </head>
 
   <body>
-    <!-- Sticky Social Bar -->
-    <div class="social-bar">
-      <a
-        href="https://facebook.com/yourprofile"
-        target="_blank"
-        aria-label="Facebook"
-      >
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a
-        href="https://linkedin.com/in/yourprofile"
-        target="_blank"
-        aria-label="LinkedIn"
-      >
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a
-        href="https://github.com/yourprofile"
-        target="_blank"
-        aria-label="GitHub"
-      >
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-
     <!-- NAVBAR -->
     <nav
-      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py"
     >
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Habeeb Kehinde</a>
+        <!-- Brand -->
+        <a class="navbar-brand fw-bold fs-4" href="#">Habeeb Kehinde</a>
 
+        <!-- Toggler for mobile -->
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
@@ -83,15 +61,25 @@
             <li class="nav-item">
               <a class="nav-link" href="#skills">Skills</a>
             </li>
-            <li class="nav-item ms-lg-3">
-              <a class="btn btn-primary" href="#contact">Contact</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Me</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a
+                class="btn btn-outline-primary"
+                href="https://habkenny.github.io/Habeeb_WebCV_2026/"
+                target="_blank"
+                rel="noopener"
+              >
+                View CV
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section
       class="hero-section d-flex align-items-center text-center text-white"
     >
@@ -109,12 +97,22 @@
 
         <!-- Hero Buttons -->
         <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
-          <a href="#projects" class="btn btn-light btn-lg">View Projects</a>
-          <a href="#contact" class="btn btn-outline-light btn-lg">Contact Me</a>
+          <a
+            class="btn btn-outline-light btn-lg"
+            href="https://habkenny.github.io/Habeeb_WebCV_2026/"
+            target="_blank"
+            rel="noopener"
+          >
+            View CV
+          </a>
         </div>
 
         <!-- Hero Social Links -->
         <div class="d-flex justify-content-center gap-3 mt-4 social-links">
+          <a href="tel:+447769533756" aria-label="Phone">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+
           <a
             href="https://wa.me/447769533756?text=Hi%20Habeeb%2C%20I%27d%20like%20to%20connect%20with%20you!"
             target="_blank"
@@ -122,6 +120,7 @@
           >
             <i class="fab fa-whatsapp"></i>
           </a>
+
           <a
             href="https://www.linkedin.com/in/habeeb-kehinde-b53740103/"
             target="_blank"
@@ -129,6 +128,7 @@
           >
             <i class="fab fa-linkedin-in"></i>
           </a>
+
           <a
             href="https://github.com/Habkenny"
             target="_blank"
