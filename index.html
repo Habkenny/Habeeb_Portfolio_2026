@@ -161,10 +161,10 @@
                   >Live Demo</a
                 >
                 <a
-                  href="https://rokkersfoundation.netlify.app/"
+                  href="https://github.com/Habkenny/Rokkers_Foundation_Charity"
                   target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Netlify</a
+                  class="btn btn-primary btn-sm"
+                  >View on Github</a
                 >
               </div>
             </div>
@@ -183,6 +183,12 @@
                   class="btn btn-primary btn-sm"
                   >Live Demo</a
                 >
+                <a
+                  href="https://github.com/Habkenny/Habtech-To_Do_List"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >View on Github</a
+                >
               </div>
             </div>
           </div>
@@ -197,6 +203,12 @@
                   target="_blank"
                   class="btn btn-primary btn-sm"
                   >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Habkenny/TaskFlow_Landing_Page"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >View on Github</a
                 >
               </div>
             </div>
@@ -213,10 +225,38 @@
                   class="btn btn-primary btn-sm"
                   >Live Demo</a
                 >
+                <a
+                  href="https://github.com/Habkenny/E_Commerce_LP"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >View on Github</a
+                >
               </div>
             </div>
           </div>
 
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">PhD Application Form</h5>
+                <p class="card-text">
+                  Buy and Sell Digital Assets Effortlessly.
+                </p>
+                <a
+                  href="https://habkenny.github.io/PhD-Application-Form/"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Habkenny/PhD-Application-Form"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >View on Github</a
+                >
+              </div>
+            </div>
+          </div>
           <div class="col-md-6">
             <div class="card h-100 shadow-sm">
               <div class="card-body">
@@ -229,6 +269,12 @@
                   target="_blank"
                   class="btn btn-primary btn-sm"
                   >Live Demo</a
+                >
+                <a
+                  href="https://github.com/Habkenny/Flrpy_LP_demo"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >View on Github</a
                 >
               </div>
             </div>
@@ -323,7 +369,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-5 bg-dark text-white">
+    <!-- <section id="contact" class="py-5 bg-dark text-white">
       <div class="container">
         <h2 class="text-center fw-bold mb-4">Contact</h2>
 
@@ -353,6 +399,52 @@
           <button class="btn btn-primary w-100">Send Message</button>
         </form>
       </div>
+    </section> -->
+
+    <section id="contact" class="py-5 bg-dark text-white">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Contact</h2>
+
+        <!-- Success message (hidden by default) -->
+        <p id="form-response" class="text-success text-center mb-4 d-none">
+          Thank you! Your message has been sent successfully. I’ll get back to
+          you soon.
+        </p>
+
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          class="mx-auto contact-form"
+          id="contact-form"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" required />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" required />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea
+              name="message"
+              class="form-control"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary w-100" type="submit">
+            Send Message
+          </button>
+        </form>
+      </div>
     </section>
 
     <!-- FOOTER -->
@@ -362,5 +454,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>

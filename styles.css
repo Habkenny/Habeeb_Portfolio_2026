@@ -267,3 +267,25 @@ button:focus {
     margin: 0.25rem 0;
   }
 }
+
+/* Fade-in animation for form response */
+.form-response {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.form-response.show {
+  opacity: 1;
+}
+
+/* Fade in and slide up animation for form response */
+.form-response {
+  opacity: 0;
+  transform: translateY(20px); /* start slightly lower */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.form-response.show {
+  opacity: 1;
+  transform: translateY(0); /* slide up into place */
+}
